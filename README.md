@@ -52,7 +52,7 @@ slider ui component for react
 ```js
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Rcslider = require('rc-slider');
+var Rcslider = require('rc-slider-fork');
 ReactDOM.render(<Rcslider />, container);
 ```
 

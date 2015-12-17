@@ -2,7 +2,7 @@ require('rc-slider/assets/index.less');
 
 const React = require('react');
 const ReactDOM = require('react-dom');
-const Slider = require('rc-slider');
+const Slider = require('rc-slider-fork');
 
 const style = {width: 400, margin: 50};
 const marks = {

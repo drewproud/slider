@@ -408,7 +408,7 @@ Slider.propTypes = {
 };
 
 Slider.defaultProps = {
-  prefixCls: 'rc-slider',
+  prefixCls: 'rc-slider-fork',
   className: '',
   tipTransitionName: '',
   min: 0,

@@ -6,7 +6,7 @@ const Slider = require('..');
 
 require('../assets/index.less');
 
-describe('rc-slider', function() {
+describe('rc-slider-fork', function() {
   this.timeout(5000);
   const div = document.createElement('div');
   document.body.appendChild(div);
@@ -17,7 +17,7 @@ describe('rc-slider', function() {
 
   it('should render a Slider with correct DOM structure', () => {
     const slider = ReactDOM.render(<Slider />, div);
-    expect(ReactTestUtils.scryRenderedDOMComponentsWithClass(slider, 'rc-slider').length).to.be(1);
+    expect(ReactTestUtils.scryRenderedDOMComponentsWithClass(slider, 'rc-slider-fork').length).to.be(1);
     expect(ReactTestUtils.scryRenderedDOMComponentsWithClass(slider, 'rc-slider-handle').length).to.be(1);
     expect(ReactTestUtils.scryRenderedDOMComponentsWithClass(slider, 'rc-slider-track').length).to.be(1);
   });
@@ -48,7 +48,7 @@ describe('rc-slider', function() {
 
   it('should render a Range with correct DOM structure', () => {
     const range = ReactDOM.render(<Slider range />, div);
-    expect(ReactTestUtils.scryRenderedDOMComponentsWithClass(range, 'rc-slider').length).to.be(1);
+    expect(ReactTestUtils.scryRenderedDOMComponentsWithClass(range, 'rc-slider-fork').length).to.be(1);
     expect(ReactTestUtils.scryRenderedDOMComponentsWithClass(range, 'rc-slider-handle').length).to.be(2);
     expect(ReactTestUtils.scryRenderedDOMComponentsWithClass(range, 'rc-slider-track').length).to.be(1);
   });
