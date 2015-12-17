@@ -3,12 +3,12 @@ webpackJsonp([2],{
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(161);
+	module.exports = __webpack_require__(218);
 
 
 /***/ },
 
-/***/ 161:
+/***/ 218:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* eslint react/no-multi-comp: 0 */
@@ -18,7 +18,7 @@ webpackJsonp([2],{
 	
 	var React = __webpack_require__(2);
 	var ReactDOM = __webpack_require__(159);
-	var Slider = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"rc-slider\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var Slider = __webpack_require__(160);
 	
 	var style = { width: 400, margin: 50 };
 	
