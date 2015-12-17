@@ -11,11 +11,11 @@ webpackJsonp([0],[
 
 	'use strict';
 	
-	__webpack_require__(2);
+	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"rc-slider/assets/index.less\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	var React = __webpack_require__(3);
-	var ReactDOM = __webpack_require__(160);
-	var Slider = __webpack_require__(161);
+	var React = __webpack_require__(2);
+	var ReactDOM = __webpack_require__(159);
+	var Slider = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"rc-slider\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var style = { width: 400, margin: 50 };
 	var marks = {
