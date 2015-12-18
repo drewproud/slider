@@ -333,7 +333,7 @@ class Slider extends React.Component {
   render() {
     const {handle, upperBound, lowerBound} = this.state;
     const {className, prefixCls, disabled, dots, included, range, step,
-           marks, max, min, tipTransitionName, tipFormatter, children} = this.props;
+           marks, max, min, tipTransitionName, tipFormatter, children, alwaysTip} = this.props;
 
     const upperOffset = this.calcOffset(upperBound);
     const lowerOffset = this.calcOffset(lowerBound);
@@ -343,7 +343,7 @@ class Slider extends React.Component {
 
     const upper = (<Handle className={handleClassName}
                            noTip={isNoTip} tipTransitionName={tipTransitionName} tipFormatter={tipFormatter}
-                           offset={upperOffset} value={upperBound} dragging={handle === 'upperBound'} />);
+                           offset={upperOffset} value={upperBound} dragging={handle === 'upperBound'} alwaysTip={ alwaysTip } />);
 
     let lower = null;
     if (range) {
@@ -404,6 +404,7 @@ Slider.propTypes = {
   dots: React.PropTypes.bool,
   range: React.PropTypes.bool,
   allowCross: React.PropTypes.bool,
+  alwaysTip: React.PropTypes.bool,
 };
 
 Slider.defaultProps = {
@@ -422,6 +423,7 @@ Slider.defaultProps = {
   dots: false,
   range: false,
   allowCross: true,
+  alwaysTip: false,
 };
 
 export default Slider;
