@@ -22368,7 +22368,6 @@
 	      var tipFormatter = props.tipFormatter;
 	      var offset = props.offset;
 	      var value = props.value;
-	      var dragging = props.dragging;
 	      var noTip = props.noTip;
 	
 	      var style = { left: offset + '%' };
