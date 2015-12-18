@@ -20155,7 +20155,7 @@
 	      if (range) {
 	        lower = _react2['default'].createElement(_Handle2['default'], { className: handleClassName,
 	          noTip: isNoTip, tipTransitionName: tipTransitionName, tipFormatter: tipFormatter,
-	          offset: lowerOffset, value: lowerBound, dragging: handle === 'lowerBound' });
+	          offset: lowerOffset, value: lowerBound, dragging: handle === 'lowerBound', alwaysTip: alwaysTip });
 	      }
 	
 	      var sliderClassName = (0, _classnames2['default'])((_classNames = {}, _defineProperty(_classNames, prefixCls, true), _defineProperty(_classNames, prefixCls + '-disabled', disabled), _defineProperty(_classNames, className, !!className), _classNames));
