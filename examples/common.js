@@ -22373,19 +22373,19 @@
 	
 	      var style = { left: offset + '%' };
 	
-	      var handle = undefined;
-	      var isTooltipVisible = undefined;
+	      // var handle;
+	      // var isTooltipVisible;
 	
-	      if (props.alwaysShowTip) {
-	        handle = _react2['default'].createElement('div', { className: className, style: style });
-	        isTooltipVisible = true;
-	      } else {
-	        handle = _react2['default'].createElement('div', { className: className, style: style,
-	          onMouseUp: this.showTooltip.bind(this),
-	          onMouseEnter: this.showTooltip.bind(this),
-	          onMouseLeave: this.hideTooltip.bind(this) });
-	        isTooltipVisible = isTooltipVisible = dragging || this.state.isTooltipVisible;
-	      }
+	      // if (props.alwaysShowTip) {
+	      // const handle = <div className={className} style={style} />;
+	      // const isTooltipVisible = true;
+	
+	      var handle = _react2['default'].createElement('div', { className: className, style: style,
+	        onMouseUp: this.showTooltip.bind(this),
+	        onMouseEnter: this.showTooltip.bind(this),
+	        onMouseLeave: this.hideTooltip.bind(this) });
+	
+	      var isTooltipVisible = true; // dragging || this.state.isTooltipVisible;
 	
 	      if (noTip) {
 	        return handle;
