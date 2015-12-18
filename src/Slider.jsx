@@ -349,7 +349,7 @@ class Slider extends React.Component {
     if (range) {
       lower = (<Handle className={handleClassName}
                        noTip={isNoTip} tipTransitionName={tipTransitionName} tipFormatter={tipFormatter}
-                       offset={lowerOffset} value={lowerBound} dragging={handle === 'lowerBound'} />);
+                       offset={lowerOffset} value={lowerBound} dragging={handle === 'lowerBound'} alwaysTip={ alwaysTip } />);
     }
 
     const sliderClassName = classNames({
