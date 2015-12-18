@@ -20139,7 +20139,6 @@
 	      var tipTransitionName = _props3.tipTransitionName;
 	      var tipFormatter = _props3.tipFormatter;
 	      var children = _props3.children;
-	      var alwaysShowTip = _props3.alwaysShowTip;
 	
 	      var upperOffset = this.calcOffset(upperBound);
 	      var lowerOffset = this.calcOffset(lowerBound);
@@ -20149,13 +20148,13 @@
 	
 	      var upper = _react2['default'].createElement(_Handle2['default'], { className: handleClassName,
 	        noTip: isNoTip, tipTransitionName: tipTransitionName, tipFormatter: tipFormatter,
-	        offset: upperOffset, value: upperBound, dragging: handle === 'upperBound', alwaysShowTip: alwaysShowTip });
+	        offset: upperOffset, value: upperBound, dragging: handle === 'upperBound' });
 	
 	      var lower = null;
 	      if (range) {
 	        lower = _react2['default'].createElement(_Handle2['default'], { className: handleClassName,
 	          noTip: isNoTip, tipTransitionName: tipTransitionName, tipFormatter: tipFormatter,
-	          offset: lowerOffset, value: lowerBound, dragging: handle === 'lowerBound', alwaysShowTip: alwaysShowTip });
+	          offset: lowerOffset, value: lowerBound, dragging: handle === 'lowerBound' });
 	      }
 	
 	      var sliderClassName = (0, _classnames2['default'])((_classNames = {}, _defineProperty(_classNames, prefixCls, true), _defineProperty(_classNames, prefixCls + '-disabled', disabled), _defineProperty(_classNames, className, !!className), _classNames));
@@ -20200,14 +20199,13 @@
 	  onAfterChange: _react2['default'].PropTypes.func,
 	  tipTransitionName: _react2['default'].PropTypes.string,
 	  tipFormatter: _react2['default'].PropTypes.func,
-	  alwaysShowTip: _react2['default'].PropTypes.bool,
 	  dots: _react2['default'].PropTypes.bool,
 	  range: _react2['default'].PropTypes.bool,
 	  allowCross: _react2['default'].PropTypes.bool
 	};
 	
 	Slider.defaultProps = {
-	  prefixCls: 'rc-slider-fork',
+	  prefixCls: 'rc-slider',
 	  className: '',
 	  tipTransitionName: '',
 	  min: 0,
@@ -20221,8 +20219,7 @@
 	  disabled: false,
 	  dots: false,
 	  range: false,
-	  allowCross: true,
-	  alwaysShowTip: false
+	  allowCross: true
 	};
 	
 	exports['default'] = Slider;
@@ -22412,8 +22409,7 @@
 	  tipFormatter: _react2['default'].PropTypes.func,
 	  value: _react2['default'].PropTypes.number,
 	  dragging: _react2['default'].PropTypes.bool,
-	  noTip: _react2['default'].PropTypes.bool,
-	  alwaysShowTip: _react2['default'].PropTypes.bool
+	  noTip: _react2['default'].PropTypes.bool
 	};
 	module.exports = exports['default'];
 
