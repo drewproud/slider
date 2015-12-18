@@ -333,7 +333,7 @@ class Slider extends React.Component {
   render() {
     const {handle, upperBound, lowerBound} = this.state;
     const {className, prefixCls, disabled, dots, included, range, step,
-           marks, max, min, tipTransitionName, tipFormatter, children, alwaysShowTip} = this.props;
+           marks, max, min, tipTransitionName, tipFormatter, children} = this.props;
 
     const upperOffset = this.calcOffset(upperBound);
     const lowerOffset = this.calcOffset(lowerBound);
@@ -343,13 +343,13 @@ class Slider extends React.Component {
 
     const upper = (<Handle className={handleClassName}
                            noTip={isNoTip} tipTransitionName={tipTransitionName} tipFormatter={tipFormatter}
-                           offset={upperOffset} value={upperBound} dragging={handle === 'upperBound'} alwaysShowTip={alwaysShowTip} />);
+                           offset={upperOffset} value={upperBound} dragging={handle === 'upperBound'} />);
 
     let lower = null;
     if (range) {
       lower = (<Handle className={handleClassName}
                        noTip={isNoTip} tipTransitionName={tipTransitionName} tipFormatter={tipFormatter}
-                       offset={lowerOffset} value={lowerBound} dragging={handle === 'lowerBound'} alwaysShowTip={alwaysShowTip} />);
+                       offset={lowerOffset} value={lowerBound} dragging={handle === 'lowerBound'} />);
     }
 
     const sliderClassName = classNames({
@@ -401,14 +401,13 @@ Slider.propTypes = {
   onAfterChange: React.PropTypes.func,
   tipTransitionName: React.PropTypes.string,
   tipFormatter: React.PropTypes.func,
-  alwaysShowTip: React.PropTypes.bool,
   dots: React.PropTypes.bool,
   range: React.PropTypes.bool,
   allowCross: React.PropTypes.bool,
 };
 
 Slider.defaultProps = {
-  prefixCls: 'rc-slider-fork',
+  prefixCls: 'rc-slider',
   className: '',
   tipTransitionName: '',
   min: 0,
@@ -423,7 +422,6 @@ Slider.defaultProps = {
   dots: false,
   range: false,
   allowCross: true,
-  alwaysShowTip: false,
 };
 
 export default Slider;
