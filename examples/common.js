@@ -22378,13 +22378,14 @@
 	        return handle;
 	      }
 	
-	      var isTooltipVisible = dragging || this.state.isTooltipVisible;
+	      var isTooltipVisible = true || dragging || this.state.isTooltipVisible;
 	      return _react2['default'].createElement(
 	        _rcTooltip2['default'],
 	        {
 	          prefixCls: className.replace('slider-handle', 'tooltip'),
 	          placement: 'top',
 	          visible: isTooltipVisible,
+	          defaultVisible: isTooltipVisible,
 	          overlay: _react2['default'].createElement(
 	            'span',
 	            null,
