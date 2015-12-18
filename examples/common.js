@@ -20139,6 +20139,7 @@
 	      var tipTransitionName = _props3.tipTransitionName;
 	      var tipFormatter = _props3.tipFormatter;
 	      var children = _props3.children;
+	      var alwaysTip = _props3.alwaysTip;
 	
 	      var upperOffset = this.calcOffset(upperBound);
 	      var lowerOffset = this.calcOffset(lowerBound);
@@ -20148,7 +20149,7 @@
 	
 	      var upper = _react2['default'].createElement(_Handle2['default'], { className: handleClassName,
 	        noTip: isNoTip, tipTransitionName: tipTransitionName, tipFormatter: tipFormatter,
-	        offset: upperOffset, value: upperBound, dragging: handle === 'upperBound' });
+	        offset: upperOffset, value: upperBound, dragging: handle === 'upperBound', alwaysTip: alwaysTip });
 	
 	      var lower = null;
 	      if (range) {
@@ -20201,7 +20202,8 @@
 	  tipFormatter: _react2['default'].PropTypes.func,
 	  dots: _react2['default'].PropTypes.bool,
 	  range: _react2['default'].PropTypes.bool,
-	  allowCross: _react2['default'].PropTypes.bool
+	  allowCross: _react2['default'].PropTypes.bool,
+	  alwaysTip: _react2['default'].PropTypes.bool
 	};
 	
 	Slider.defaultProps = {
@@ -20219,7 +20221,8 @@
 	  disabled: false,
 	  dots: false,
 	  range: false,
-	  allowCross: true
+	  allowCross: true,
+	  alwaysTip: false
 	};
 	
 	exports['default'] = Slider;
