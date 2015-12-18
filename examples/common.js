@@ -22367,6 +22367,9 @@
 	      var value = props.value;
 	      var dragging = props.dragging;
 	      var noTip = props.noTip;
+	      var alwaysTip = props.alwaysTip;
+	
+	      var defaultVisible = !!alwaysTip;
 	
 	      var style = { left: offset + '%' };
 	      var handle = _react2['default'].createElement('div', { className: className, style: style,
@@ -22378,14 +22381,14 @@
 	        return handle;
 	      }
 	
-	      var isTooltipVisible = true || dragging || this.state.isTooltipVisible;
+	      var isTooltipVisible = alwaysTip || dragging || this.state.isTooltipVisible;
 	      return _react2['default'].createElement(
 	        _rcTooltip2['default'],
 	        {
 	          prefixCls: className.replace('slider-handle', 'tooltip'),
 	          placement: 'top',
 	          visible: isTooltipVisible,
-	          defaultVisible: isTooltipVisible,
+	          defaultVisible: defaultVisible,
 	          overlay: _react2['default'].createElement(
 	            'span',
 	            null,
@@ -22410,7 +22413,8 @@
 	  tipFormatter: _react2['default'].PropTypes.func,
 	  value: _react2['default'].PropTypes.number,
 	  dragging: _react2['default'].PropTypes.bool,
-	  noTip: _react2['default'].PropTypes.bool
+	  noTip: _react2['default'].PropTypes.bool,
+	  alwaysTip: _react2['default'].PropTypes.bool
 	};
 	module.exports = exports['default'];
 
