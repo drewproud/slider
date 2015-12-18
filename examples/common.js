@@ -22368,28 +22368,20 @@
 	      var tipFormatter = props.tipFormatter;
 	      var offset = props.offset;
 	      var value = props.value;
+	      var dragging = props.dragging;
 	      var noTip = props.noTip;
 	
 	      var style = { left: offset + '%' };
-	
-	      // var handle;
-	      // var isTooltipVisible;
-	
-	      // if (props.alwaysShowTip) {
-	      // const handle = <div className={className} style={style} />;
-	      // const isTooltipVisible = true;
-	
 	      var handle = _react2['default'].createElement('div', { className: className, style: style,
 	        onMouseUp: this.showTooltip.bind(this),
 	        onMouseEnter: this.showTooltip.bind(this),
 	        onMouseLeave: this.hideTooltip.bind(this) });
 	
-	      var isTooltipVisible = true; // dragging || this.state.isTooltipVisible;
-	
 	      if (noTip) {
 	        return handle;
 	      }
 	
+	      var isTooltipVisible = dragging || this.state.isTooltipVisible;
 	      return _react2['default'].createElement(
 	        _rcTooltip2['default'],
 	        {
