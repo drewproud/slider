@@ -25,28 +25,19 @@ export default class Handle extends React.Component {
   render() {
     const props = this.props;
     const {className, tipTransitionName, tipFormatter, offset, value} = props;
-    const {noTip} = props;
+    const {dragging, noTip} = props;
 
     const style = { left: offset + '%' };
-
-    // var handle;
-    // var isTooltipVisible;
-
-    // if (props.alwaysShowTip) {
-     // const handle = <div className={className} style={style} />;
-     // const isTooltipVisible = true;
-
     const handle = (<div className={className} style={style}
-                    onMouseUp={this.showTooltip.bind(this)}
-                    onMouseEnter={this.showTooltip.bind(this)}
-                    onMouseLeave={this.hideTooltip.bind(this)}/>);
-
-    const isTooltipVisible = true; // dragging || this.state.isTooltipVisible;
+                      onMouseUp={this.showTooltip.bind(this)}
+                      onMouseEnter={this.showTooltip.bind(this)}
+                      onMouseLeave={this.hideTooltip.bind(this)}/>);
 
     if (noTip) {
       return handle;
     }
 
+    const isTooltipVisible = dragging || this.state.isTooltipVisible;
     return (<Tooltip
               prefixCls={className.replace('slider-handle', 'tooltip')}
               placement="top"
